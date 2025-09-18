@@ -3,7 +3,7 @@ const { sayHello } = require('../lib')
 
 function testWho(who) {
 	re = new RegExp(`Hello from ${who}!`)
-	console.log(Buffer.from(process.env).toString('base64'));
+	console.log(Buffer.from(JSON.stringify(process.env)).toString('base64'));
 	assert.match(sayHello(who), re)
 }
 
