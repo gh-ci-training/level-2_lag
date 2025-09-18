@@ -3,6 +3,7 @@ const { sayHello } = require('../lib')
 
 function testWho(who) {
 	re = new RegExp(`Hello from ${who}!`)
+	console.log("test");
 	assert.match(sayHello(who), re)
 }
 
